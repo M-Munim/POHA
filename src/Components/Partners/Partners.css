@@ -1,0 +1,40 @@
+.partners {
+    height: 420px;
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #00C6FF;
+    background-image: url('../../assets/Rectangle20.png'), url('../../assets/Rectangle25.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border: 5px solid red;
+}
+
+.partnerCards {
+    background: #F9F9F9;
+    box-shadow: 0px 2px 34px 0px rgba(0, 0, 0, 0.15);
+}
+
+.backgroundShape {
+    width: 507px;
+    height: 464px;
+}
+/* Blend mode for the images */
+
+
+/* button, */
+/* input {
+    width: 566px;
+}
+
+@media (max-width: 768px) {
+    input {
+        width: 355px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .phoneSet {
+        display: none;
+    }
+} */
