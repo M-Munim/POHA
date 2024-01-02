@@ -2,14 +2,15 @@
 
 import React from 'react'
 import { Accordion } from 'flowbite-react';
-import Emf from "../PhyPracticals/Phy9th/Emf"
-import Galvanometer from "../PhyPracticals/Phy9th/Galvanometer"
-import Potentiometer from './Phy9th/Potentiometer';
-import OhmsLaw from './Phy9th/OhmsLaw';
-import GalvanoToAmmeter from './Phy9th/GalvanoToAmmeter';
-import ACsonometer from './Phy9th/ACsonometer';
-import UvConcave from './Phy9th/UvConcave';
-import FocalLenConvex from './Phy9th/FocalLenConvex';
+import Emf from "./Phy12th/Emf"
+import Galvanometer from "./Phy12th/Galvanometer"
+import Potentiometer from './Phy12th/Potentiometer';
+import OhmsLaw from './Phy12th/OhmsLaw';
+import GalvanoToAmmeter from './Phy12th/GalvanoToAmmeter';
+import ACsonometer from './Phy12th/ACsonometer';
+import UvConcave from './Phy12th/UvConcave';
+import FocalLenConvex from './Phy12th/FocalLenConvex';
+import Ohmslaw11 from './Phy11th/Ohmslaw11';
 
 const PhyPracticals = () => {
     return (
@@ -222,7 +223,7 @@ const PhyPracticals = () => {
                             <p className="">Class 12th</p>
                         </Accordion.Title>
                         <Accordion.Content className=' bg-overviewWhite rounded-b-lg'>
-                            <div className="flex gap-4 my-1 flex-wrap">
+                            <div className="flex gap-4 py-3 flex-wrap">
                                 <OhmsLaw />
                                 <Potentiometer />
                                 <Emf />
@@ -244,8 +245,8 @@ const PhyPracticals = () => {
                             <p className="">Class 11th</p>
                         </Accordion.Title>
                         <Accordion.Content className=' bg-overviewWhite rounded-b-lg'>
-                            <div className="flex gap-4 my-1 flex-wrap">
-                                <OhmsLaw />
+                            <div className="flex gap-4 py-3 flex-wrap">
+                                <Ohmslaw11 />
                                 <Potentiometer />
                                 <Emf />
                                 <Galvanometer />
@@ -266,7 +267,7 @@ const PhyPracticals = () => {
                             <p className="">Class 10th</p>
                         </Accordion.Title>
                         <Accordion.Content className=' bg-overviewWhite rounded-b-lg'>
-                            <div className="flex gap-4 my-1 flex-wrap">
+                            <div className="flex gap-4 py-3 flex-wrap">
                                 <OhmsLaw />
                                 <Potentiometer />
                                 <Emf />
@@ -288,7 +289,7 @@ const PhyPracticals = () => {
                             <p className="">Class 9th</p>
                         </Accordion.Title>
                         <Accordion.Content className=' bg-overviewWhite rounded-b-lg'>
-                            <div className="flex gap-4 my-1 flex-wrap">
+                            <div className="flex gap-4 py-3 flex-wrap">
                                 <OhmsLaw />
                                 <Potentiometer />
                                 <Emf />
@@ -301,8 +302,6 @@ const PhyPracticals = () => {
                         </Accordion.Content>
                     </Accordion.Panel>
                 </Accordion>
-
-
             </div>
         </div>
     )

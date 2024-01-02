@@ -131,7 +131,6 @@ const DashboardLayout = ({ children }) => {
       </div>
 
       <div className="w-full">
-
         {/* Top Nav */}
         <div className=" flex w-full bg-overviewWhite h-16 items-center justify-between px-6">
           <div className="relative">
