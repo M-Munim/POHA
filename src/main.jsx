@@ -10,9 +10,13 @@ import BioPracticals from './Components/Dashboard/BioPracticals/BioPracticals.js
 import ChemPracticals from './Components/Dashboard/ChemPracticals/ChemPracticals.jsx';
 import PhyPracticals from './Components/Dashboard/PhyPracticals/PhyPracticals.jsx';
 import EmfExp12 from './Components/Dashboard/PhyPracticals/Phy12thexplained/EmfExp12.jsx';
-import OhmExp12 from "./Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12.jsx";
+import OhmExp12 from "./Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/OhmExp12.jsx";
 import PotentiometerExp12 from "./Components/Dashboard/PhyPracticals/Phy12thexplained/PotentiometerExp12.jsx"
 import OhmExp11 from './Components/Dashboard/PhyPracticals/Phy11thexplained/OhmExp11.jsx';
+import Procedure from "./Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Procedure.jsx"
+import Animation from "./Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Animation.jsx"
+import Theory from "./Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Theory.jsx"
+import OhmExp12Outlet from './Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/OhmExp12Outlet.jsx';
 
 const App = () => {
   return (
@@ -31,30 +35,40 @@ const App = () => {
               <Route path="phypracticals/*" element={
                 <Routes>
                   <Route index element={<PhyPracticals />} />
-                  <Route path="EmfExp12" element={<EmfExp12 />} />
-                  <Route path="OhmExp12" element={<OhmExp12 />} />
+                  <Route path="OhmExp12/*" element={
+                    <OhmExp12Outlet>
+                      <Routes>
+                        {/* <Route index element={<OhmExp12 />} /> */}
+                        <Route path="theory" element={<Theory />} />
+                        <Route path="procedure" element={<Procedure />} />
+                        <Route path="animation" element={<Animation />} />
+                    </Routes>
+                    </OhmExp12Outlet>
+              }
+
+              />
+
+
+              {/* <Route path="EmfExp12" element={<EmfExp12 />} />
                   <Route path="PotentiometerExp12" element={<PotentiometerExp12 />} />
-                  <Route path="OhmExp11" element={<OhmExp11 />} />
-
-
-
-                </Routes>
+                  <Route path="OhmExp11" element={<OhmExp11 />} /> */}
+            </Routes>
               } />
 
 
-              {/* <Route path="emf" element={<Emf />} /> */}
+            {/* <Route path="emf" element={<Emf />} /> */}
 
 
-              {/* <Route path="bio" element={<Bio />} />
+            {/* <Route path="bio" element={<Bio />} />
                 <Route path="biopracticals" element={<BioPracticals />} />
                 <Route path="chem" element={<Chem />} />
                 <Route path="chempracticals" element={<ChemPracticals />} /> */}
-            </Routes>
+          </Routes>
           </DashboardLayout>
         }
         />
-      </Routes>
-    </Router>
+    </Routes>
+    </Router >
   );
 };
 
