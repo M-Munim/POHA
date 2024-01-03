@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const OhmsLaw = () => {
   return (
-    <NavLink to='/Dashmain/phypracticals/OhmExp12/procedure'>
+    <NavLink to='/Dashmain/phypracticals/OhmExp12/theory'>
       <div className='w-64 h-60 bg-overviewWhite border-primaryGradient border-2 rounded-xl relative'>
         <div className="p-4">
           <img src={ohm} alt="" className='rounded-md' />

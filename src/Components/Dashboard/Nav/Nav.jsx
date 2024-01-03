@@ -16,21 +16,21 @@ const Nav = () => {
                     <li>
                         <NavLink to="/Dashmain/phypracticals/OhmExp12/animation" className="py-4 px-6 rounded-lg">Animation</NavLink>
                     </li>
-                    {/* <li>
-                        <NavLink to="/Dashmain/phypracticals/OhmExp12/" className="py-4 px-6 rounded-lg">Simulator</NavLink>
+                    <li>
+                        <NavLink to="/Dashmain/phypracticals/OhmExp12/simulator" className="py-4 px-6 rounded-lg">Simulator</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Dashmain/phypracticals/OhmExp12/" className="py-4 px-6 rounded-lg">Video</NavLink>
+                        <NavLink to="/Dashmain/phypracticals/OhmExp12/video" className="py-4 px-6 rounded-lg">Video</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Dashmain/phypracticals/OhmExp12/" className="py-4 px-6 rounded-lg">Viva Voice</NavLink>
+                        <NavLink to="/Dashmain/phypracticals/OhmExp12/viva" className="py-4 px-6 rounded-lg">Viva Voice</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Dashmain/phypracticals/OhmExp12/" className="py-4 px-6 rounded-lg">Resources</NavLink>
+                        <NavLink to="/Dashmain/phypracticals/OhmExp12/resources" className="py-4 px-6 rounded-lg">Resources</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Dashmain/phypracticals/OhmExp12/" className="py-4 px-6 rounded-lg">Feedback</NavLink>
-                    </li> */}
+                        <NavLink to="/Dashmain/phypracticals/OhmExp12/feedback" className="py-4 px-6 rounded-lg">Feedback</NavLink>
+                    </li>
                 </ul>
             </nav >
         </>

@@ -22,7 +22,7 @@ const OhmExp12Outlet = ({ children }) => {
                     </div>
                 </div>
 
-                <div className= " bg-overviewWhite rounded-lg p-3 mt-6">
+                <div className= " bg-overviewWhite rounded-lg p-2 mt-6">
                     <Nav />
                     {children}
                 </div>

@@ -39,7 +39,8 @@ export default {
         dark25: "#E2E2E2",
         dark: '#1E1E1E',
         dark50: "#8F8F8F",
-        dashmain: "#F0EFEF"
+        dashmain: "#F0EFEF",
+        aliceBlue: "#EAF0FB"
       },
       animation: {
         slide: "slide 25s linear infinite"
@@ -55,7 +56,9 @@ export default {
       },
       width: {
         wAbout: "442px",
-        dashCards: "333.33px"
+        dashCards: "333.33px",
+        widthhh: "833.33px",
+        width404: "404px"
       },
       height: {
         overview: "493px",

@@ -5,12 +5,12 @@ const Theory = () => {
     <div className='w-4/5'>
       <div className="aim my-8">
         <p className="text-dark font-semibold text-xl mb-3">Aim</p>
-        <p className="text-dark50 font-normal text-base">To determine the resistance per cm of a given wire by plotting a graph of potential <br /> difference versus current, and hence to determine its resistivity.</p>
+        <p className="text-dark50 font-normal text-base pl-1">To determine the resistance per cm of a given wire by plotting a graph of potential <br /> difference versus current, and hence to determine its resistivity.</p>
       </div>
 
       <div className="theory mb-8">
         <p className="text-dark font-semibold text-xl mb-3">The Theory</p>
-        <p className="text-dark50 font-normal text-base">What does Ohm's Law state? <br /> <br />
+        <p className="text-dark50 font-normal text-base pl-1">What does Ohm's Law state? <br /> <br />
 
           According to the Ohm's law, "The current flowing through a conductor is directly proportional to the potential difference across its ends provided the physical conditions (temperature, dimensions, pressure) of the conductor remains the same." If I be the current flowing through a conductor and V be the potential difference across its ends, then according to Ohm's Law, <br /> <br />
 
@@ -52,7 +52,7 @@ const Theory = () => {
 
       <div className="objectives">
         <p className="text-dark font-semibold text-xl mb-3">Learning Objectives</p>
-        <p className="text-dark50 font-normal text-base">
+        <p className="text-dark50 font-normal text-base pl-1">
           ●  Students learn Ohm’s law. <br />
           ●  Students know the relation between voltage, current and resistance. <br />
           ●  Students learn how to find out the resistivity of the material  of a give wire. <br />

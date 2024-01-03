@@ -17,6 +17,11 @@ import Procedure from "./Components/Dashboard/PhyPracticals/Phy12thexplained/Ohm
 import Animation from "./Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Animation.jsx"
 import Theory from "./Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Theory.jsx"
 import OhmExp12Outlet from './Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/OhmExp12Outlet.jsx';
+import Simulator from './Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Simulator.jsx';
+import Video from './Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Video.jsx';
+import VivaVoice from './Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/VivaVoice.jsx';
+import Resources from './Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Resources.jsx';
+import Feedback from './Components/Dashboard/PhyPracticals/Phy12thexplained/OhmExp12/NavPages/Feedback.jsx';
 
 const App = () => {
   return (
@@ -42,32 +47,38 @@ const App = () => {
                         <Route path="theory" element={<Theory />} />
                         <Route path="procedure" element={<Procedure />} />
                         <Route path="animation" element={<Animation />} />
-                    </Routes>
+                        <Route path="simulator" element={<Simulator />} />
+                        <Route path="simulator" element={<Simulator />} />
+                        <Route path="video" element={<Video />} />
+                        <Route path="viva" element={<VivaVoice />} />
+                        <Route path="resources" element={<Resources />} />
+                        <Route path="feedback" element={<Feedback />} />
+                      </Routes>
                     </OhmExp12Outlet>
-              }
+                  }
 
-              />
+                  />
 
 
-              {/* <Route path="EmfExp12" element={<EmfExp12 />} />
+                  {/* <Route path="EmfExp12" element={<EmfExp12 />} />
                   <Route path="PotentiometerExp12" element={<PotentiometerExp12 />} />
                   <Route path="OhmExp11" element={<OhmExp11 />} /> */}
-            </Routes>
+                </Routes>
               } />
 
 
-            {/* <Route path="emf" element={<Emf />} /> */}
+              {/* <Route path="emf" element={<Emf />} /> */}
 
 
-            {/* <Route path="bio" element={<Bio />} />
+              {/* <Route path="bio" element={<Bio />} />
                 <Route path="biopracticals" element={<BioPracticals />} />
                 <Route path="chem" element={<Chem />} />
                 <Route path="chempracticals" element={<ChemPracticals />} /> */}
-          </Routes>
+            </Routes>
           </DashboardLayout>
         }
         />
-    </Routes>
+      </Routes>
     </Router >
   );
 };
