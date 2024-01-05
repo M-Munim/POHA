@@ -40,7 +40,7 @@ export default {
         dark: '#1E1E1E',
         dark50: "#8F8F8F",
         dashmain: "#F0EFEF",
-        aliceBlue: "#EAF0FB"
+        aliceBlue: "#EAF0FB",
       },
       animation: {
         slide: "slide 25s linear infinite"

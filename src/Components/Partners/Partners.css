@@ -7,7 +7,6 @@
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
-    border: 5px solid red;
 }
 
 .partnerCards {
@@ -19,22 +18,3 @@
     width: 507px;
     height: 464px;
 }
-/* Blend mode for the images */
-
-
-/* button, */
-/* input {
-    width: 566px;
-}
-
-@media (max-width: 768px) {
-    input {
-        width: 355px;
-    }
-}
-
-@media (max-width: 1060px) {
-    .phoneSet {
-        display: none;
-    }
-} */

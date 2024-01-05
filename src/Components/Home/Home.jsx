@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll';
 import Partners from "../Partners/Partners"
 
@@ -12,6 +12,32 @@ import Ellipse9 from "../../assets/Ellipse9.svg"
 import Ellipse8 from "../../assets/Ellipse8.svg"
 
 const Home = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [rememberMe, setRememberMe] = useState(false);
+
+    const handleUsernameChange = (e) => {
+        setUsername(e.target.value);
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
+
+    const handleRememberMeChange = () => {
+        setRememberMe(!rememberMe);
+    };
+
+    const handleLogin = () => {
+        // Perform login logic here using username, password, and rememberMe
+        console.log('Login clicked');
+    };
+
+    const handleForgotPassword = () => {
+        // Redirect or show a forgot password modal
+        console.log('Forgot Password clicked');
+    };
+
     return (
         <>
             {/* HOME */}
@@ -47,13 +73,13 @@ const Home = () => {
                     </defs>
                 </svg>
 
-                <div className="border-2 border-dashed border-red-700 rounded-full h-96 w-96 absolute -top-20 right-96 opacity-30"></div>
-                <div className="border-2 border-solid border-red-700 rounded-full h-80 w-80 absolute bottom-28 left-72 opacity-30"></div>
-                <div className="border-2 border-dashed border-red-700 rounded-full h-96 w-96 absolute bottom-20 left-64 opacity-30"></div>
+                <div className="border-2 border-dashed border-white rounded-full h-96 w-96 absolute -top-20 right-96 opacity-30"></div>
+                <div className="border-2 border-solid border-white rounded-full h-80 w-80 absolute bottom-28 left-72 opacity-30"></div>
+                <div className="border-2 border-dashed border-white rounded-full h-96 w-96 absolute bottom-20 left-64 opacity-30"></div>
 
                 <div className="flex items-center justify-between h-auto  w-10/12 m-auto relative z-10">
                     {/* Left */}
-                    <div className="left border w-4/6 my-44 ">
+                    <div className="left w-4/6 my-44 ">
                         <div className="text-white">
                             <p className="uppercase font-semibold text-xl leading-normal">visual type scale</p>
                             <p className="font-bold text-7xl leading-normal">21st Century K-12</p>
@@ -61,13 +87,13 @@ const Home = () => {
                             <p className="leading-normal font-medium text-base">Transforming learning and teaching experience with the use of technology.</p>
                         </div>
                         <div className="mt-20 bg-white h-14 rounded-lg w-40 flex items-center gap-4 justify-center">
-                            <button className="font-semibold leading-normal border pl-0" style={{
+                            <button className="font-semibold leading-normal pl-0" style={{
                                 background: 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
                             }}>Learn More</button>
 
-                            <div className="text-4xl border" >
+                            <div className="text-4xl" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14" fill="none">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M23.1567 7.47168C23.2817 7.34666 23.3519 7.1771 23.3519 7.00029C23.3519 6.82349 23.2817 6.65392 23.1566 6.5289L17.4998 0.872043C17.3748 0.747018 17.2052 0.676778 17.0284 0.676773C16.8516 0.676769 16.682 0.747001 16.557 0.872018C16.432 0.997036 16.3617 1.1666 16.3618 1.34341C16.3618 1.52021 16.432 1.68978 16.557 1.8148L21.0759 6.33369L1.94398 6.33224C1.76695 6.33223 1.59718 6.40256 1.472 6.52773C1.34683 6.65291 1.27651 6.82268 1.27651 6.99971C1.27651 7.17674 1.34684 7.34652 1.47203 7.47171C1.59721 7.59689 1.76699 7.66722 1.94402 7.66722L21.0759 7.66678L16.5573 12.1854C16.4323 12.3104 16.362 12.48 16.362 12.6568C16.3621 12.8336 16.4323 13.0032 16.5573 13.1282C16.6823 13.2532 16.8519 13.3235 17.0287 13.3235C17.2055 13.3235 17.3751 13.2533 17.5001 13.1282L23.1567 7.47168Z" fill="url(#paint0_linear_934_59)" stroke="url(#paint1_linear_934_59)" />
                                     <defs>
@@ -87,7 +113,7 @@ const Home = () => {
                     </div>
 
                     {/* Right */}
-                    <div className="right border w-2/5 m-auto relative bg-white rounded-lg my-40">
+                    <div className="right w-2/5 m-auto relative bg-white rounded-lg my-40 shadow-md">
                         <svg xmlns="http://www.w3.org/2000/svg" width="105" height="107" viewBox="0 0 105 107" fill="none" className='absolute right-0'>
                             <path d="M196.619 55.3122C205.497 39.4356 210 21.2201 210 1.16173C210 -18.8966 205.497 -37.3721 196.619 -53.2487C187.891 -69.0033 174.907 -81.9426 159.174 -90.5657C143.354 -99.3191 125.165 -103.761 105.1 -103.761C85.0344 -103.761 66.8102 -99.3191 50.908 -90.5657C35.1382 -81.9641 22.1227 -69.0214 13.3808 -53.2487C4.50325 -37.3721 1.15717e-05 -19.0738 1.06907e-05 1.16172C9.80968e-06 21.3973 4.50324 39.6482 13.3808 55.4421C22.1721 71.1739 35.1755 84.1005 50.908 92.7474C66.8219 101.595 85.0578 106.072 105.111 106.072C125.165 106.072 143.366 101.583 159.209 92.7356C174.914 84.0389 187.877 71.0715 196.619 55.3122ZM34.9355 1.12628C34.7626 -11.2262 37.9459 -23.3911 44.1414 -34.0527C50.1708 -44.3034 58.8646 -52.7012 69.2846 -58.34C80.3738 -64.1004 92.6697 -67.1059 105.147 -67.1059C117.623 -67.1059 129.919 -64.1004 141.009 -58.34C151.381 -52.7444 160.029 -44.3884 166.011 -34.1826C171.979 -23.3872 175.111 -11.2357 175.111 1.12038C175.111 13.4765 171.979 25.628 166.011 36.4234C160.028 46.6288 151.38 54.9847 141.009 60.5808C129.919 66.3411 117.623 69.3467 105.147 69.3467C92.6697 69.3467 80.3738 66.3411 69.2846 60.5808C58.8646 54.942 50.1708 46.5442 44.1414 36.2934C37.9469 25.6358 34.7635 13.4749 34.9355 1.12628Z" fill="url(#paint0_linear_26_268)" />
                             <defs>
@@ -107,32 +133,27 @@ const Home = () => {
                         </div>
 
                         <div className="inputs flex flex-col items-center justify-center gap-3">
-                            <div className="input">
-                                <input type="text" name="" id="" placeholder='User Name' className='w-96 h-10 rounded border border-textLight py-2 ps-2 font-normal text-base outline-none' />
-                            </div>
+                            <input type="text" value={username} onChange={handleUsernameChange} placeholder='User Name' className='w-96 h-10 rounded border border-textLight py-2 ps-2 font-normal text-base outline-none' />
 
-                            <div className="input">
-                                <input type="password" name="" id="" placeholder='Password' className='w-96 h-10 rounded border border-textLight py-2 ps-2 font-normal text-base outline-none' />
-                            </div>
+                            <input type="password" value={password} placeholder='Password' onChange={handlePasswordChange} className='w-96 h-10 rounded border border-dark50 py-2 ps-2 font-normal text-base outline-none' />
 
-                            <div className="flex justify-between items-center border mb-10 w-96">
-                                <div className=" flex justify-center items-center gap-2">
-                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" placeholder='fsd' className='w-3 h-3' />
-                                    <label htmlFor="vehicle1" className='text-xs font-normal text-textLight' > Remember me</label>
+                            <div className="flex justify-between items-center mb-10 w-96">
+                                <div className="flex gap-2 items-center justify-center text-xs font-normal text-textLight">
+                                    <input type="checkbox" checked={rememberMe} onChange={handleRememberMeChange} />
+                                    Remember me
                                 </div>
-                                <div className="">
-                                    <p className="font-medium text-xs text-primaryBlue">Forgot Password?</p>
-                                </div>
+                                <a href="#" onClick={handleForgotPassword} className="font-medium text-xs text-primaryBlue">
+                                    Forgot Password ?
+                                </a>
                             </div>
 
-                            <div className="mb-16">
-                                <NavLink to="/Dashmain">
-                                    <button className='w-44 h-14 rounded-lg text-white leading-normal font-semibold text-base' style={{
-                                        background: 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',
-                                    }}>Login</button>
-                                </NavLink>
-                            </div>
+                            <NavLink to="/Dashmain" className="mb-10">
+                                <button onClick={handleLogin} className='w-44 h-14 rounded-lg text-white leading-normal font-semibold text-base' style={{
+                                    background: 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',
+                                }}>Login</button>
+                            </NavLink>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -142,7 +163,7 @@ const Home = () => {
             <div className='overview'>
                 <div className="flex w-11/12 ml-auto py-32 font-workSans" id='overview'>
                     {/* Left Section */}
-                    <div className="left border border-dotted border-gray-500  w-2/5 flex flex-col gap-6">
+                    <div className="left w-2/5 flex flex-col gap-6">
                         <div className="l-top flex items-center gap-2">
                             <div className="l-top-left  w-12 h-12 rounded-lg flex items-center justify-center" style={{
                                 background: 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',
@@ -170,7 +191,7 @@ const Home = () => {
                             Learn Smart Classroom, powered by Singapore-based Knowledge Platform, is used by over 700 schools in Pakistan and over 1,000 schools in China. This solution uses modern teaching techniques to improve each child’s education by making classroom learning more effective and engaging. Through Learn Smart Classroom, your child will join a global community of over 500,000 bright learners from China, the Philippines, Myanmar and Pakistan.
                         </div>
                         <div className="l-bottom w-44 flex items-center gap-3 justify-between">
-                            <ScrollLink to="home" smooth={true} duration={800} className="font-semibold text-base cursor-pointer border" style={{
+                            <ScrollLink to="home" smooth={true} duration={800} className="font-semibold text-base cursor-pointer" style={{
                                 background: 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
@@ -197,7 +218,7 @@ const Home = () => {
                     </div>
 
                     {/* Right Section */}
-                    <div className="right border border-dotted border-gray-500  w-3/5 relative">
+                    <div className="right w-3/5 relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="498" height="464" viewBox="0 0 498 464" fill="none" className='ml-auto'>
                             <path d="M24.3993 0.000366211H499V464L125.824 315.564C98.7109 304.78 77.9744 282.248 69.4718 254.335L1.44073 30.9937C-3.25614 15.5741 8.28026 0.000366211 24.3993 0.000366211Z" fill="url(#paint0_linear_26_278)" />
                             <defs>
@@ -216,13 +237,13 @@ const Home = () => {
 
                         {/* Additional Divs */}
                         <div className="bg-overviewBlue h-56 w-56 absolute -top-20 right-48 rounded-lg flex items-center justify-center">
-                            <div className=" font-semibold text-2xl leading-normal text-white border text-center">
+                            <div className=" font-semibold text-2xl leading-normal text-white text-center">
                                 1,000,000+ Students
                             </div>
                         </div>
 
                         <div className="bg-overviewWhite h-44 w-44 absolute top-20 right-96 rounded-lg flex items-center justify-center">
-                            <div className=" font-semibold text-2xl leading-normal text-black border text-center">
+                            <div className=" font-semibold text-2xl leading-normal text-black text-center">
                                 <span className="text-3xl text-primaryBlue">100+</span>
                                 <br />
                                 Schools
@@ -230,14 +251,14 @@ const Home = () => {
                         </div>
 
                         <div className="bg-overviewBlue h-40 w-40 absolute top-56 right-80 rounded-lg flex items-center justify-center">
-                            <div className=" font-semibold text-2xl leading-normal text-white border text-center">
+                            <div className=" font-semibold text-2xl leading-normal text-white text-center">
                                 20,000+ Teachers
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="relative  w-11/12 mr-auto pb-96 mt-10 pt-24 border border-dotted border-gray-500 overflow-hidden">
+                <div className="relative  w-11/12 mr-auto pb-96 mt-10 pt-24 overflow-hidden">
                     {/* Top Right SVG */}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -271,9 +292,10 @@ const Home = () => {
                         style={{
                             backgroundImage: `url(${rectangle9}), url(${rectangle8})`,
                             backgroundSize: 'cover',
-                            backgroundPosition: 'center',
+                            // backgroundPosition: 'center',
                             backgroundBlendMode: 'multiply',
-                            borderRadius: "16px"
+                            borderRadius: "16px",
+                            objectFit:"cover"
                         }}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
@@ -507,8 +529,8 @@ const Home = () => {
 
             {/* FEEDBACK */}
 
-            <div className='py-40 flex border border-solid border-sky-900 relative' id='feedback'>
-                <div className="relative w-1/12 border border-solid border-sky-900">
+            <div className='py-40 flex relative' id='feedback'>
+                <div className="relative w-1/12 ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="392" height="678" viewBox="0 0 392 678" fill="none">
                         <path d="M348.545 513.504C377.376 462.304 392.001 403.561 392.001 338.875C392.001 274.189 377.376 214.608 348.545 163.408C320.198 112.601 278.032 70.8739 226.938 43.0652C175.56 14.8366 116.489 0.512683 51.3247 0.51268C-13.8399 0.512678 -73.0251 14.8366 -124.669 43.0652C-175.883 70.8046 -218.153 112.543 -246.543 163.408C-275.374 214.608 -289.999 273.618 -289.999 338.875C-289.999 404.133 -275.374 462.99 -246.543 513.923C-217.992 564.656 -175.762 606.343 -124.669 634.228C-72.987 662.762 -13.7637 677.2 51.3628 677.2C116.489 677.2 175.598 662.724 227.052 634.19C278.056 606.144 320.154 564.326 348.545 513.504ZM-176.542 338.761C-177.104 298.926 -166.765 259.695 -146.645 225.313C-127.063 192.256 -98.8294 165.174 -64.9891 146.989C-28.9757 128.413 10.9569 118.72 51.477 118.72C91.997 118.72 131.93 128.413 167.943 146.989C201.628 165.034 229.714 191.982 249.142 224.894C268.522 259.708 278.694 298.895 278.694 338.742C278.694 378.589 268.522 417.776 249.142 452.59C229.713 485.501 201.626 512.448 167.943 530.495C131.93 549.071 91.997 558.764 51.477 558.764C10.9569 558.764 -28.9757 549.071 -64.9891 530.495C-98.8294 512.31 -127.063 485.228 -146.645 452.171C-166.762 417.801 -177.1 378.584 -176.542 338.761Z" fill="url(#paint0_linear_51_60)" />
                         <defs>
@@ -576,7 +598,6 @@ const Home = () => {
                         backgroundImage: `url(${Ellipse9})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply'
                     }}>
 
                     </div>
@@ -586,7 +607,6 @@ const Home = () => {
                             backgroundImage: `url(${Ellipse7})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
-                            // backgroundBlendMode: 'multiply'
                         }}>
 
                     </div>
@@ -595,7 +615,6 @@ const Home = () => {
                         backgroundImage: `url(${Ellipse3})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply'
                     }}>
 
                     </div>
@@ -610,7 +629,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="w-5/12 border border-dotted border-yellow-500 m-auto absolute top-16 right-96">
+                <div className="w-5/12 m-auto absolute top-16 right-96">
                     <div className="heading flex items-center gap-3 justify-center mb-56">
                         <div className="logo w-12 h-12 rounded-lg flex items-center justify-center" style={{
                             background: 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',
@@ -649,7 +668,7 @@ const Home = () => {
                         </div>
 
                         <div className="right flex items-center justify-between gap-5">
-                            <div className="">
+                            <div className= " cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M18.8432 29.1673C18.7182 29.2928 18.648 29.463 18.648 29.6406C18.648 29.8181 18.7182 29.9883 18.8432 30.1138L24.5001 35.7932C24.6251 35.9188 24.7947 35.9893 24.9715 35.9893C25.1483 35.9893 25.3179 35.9188 25.4429 35.7933C25.5679 35.6678 25.6381 35.4975 25.6381 35.32C25.6381 35.1425 25.5679 34.9722 25.4429 34.8467L20.924 30.3098L40.0559 30.3113C40.2329 30.3113 40.4027 30.2407 40.5279 30.115C40.6531 29.9893 40.7234 29.8189 40.7234 29.6411C40.7234 29.4634 40.653 29.2929 40.5279 29.1673C40.4027 29.0416 40.2329 28.971 40.0559 28.971L20.9239 28.9714L25.4426 24.4348C25.5676 24.3092 25.6378 24.139 25.6378 23.9615C25.6378 23.784 25.5676 23.6137 25.4426 23.4882C25.3175 23.3627 25.148 23.2922 24.9712 23.2922C24.7944 23.2922 24.6248 23.3627 24.4998 23.4882L18.8432 29.1673Z" fill="url(#paint0_linear_117_305)" stroke="url(#paint1_linear_117_305)" />
                                     <defs>
@@ -664,7 +683,7 @@ const Home = () => {
                                     </defs>
                                 </svg>
                             </div>
-                            <div className="">
+                            <div className=" cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                                     <rect width="60" height="60" rx="8" fill="url(#paint0_linear_117_308)" />
                                     <path fillRule="evenodd" clipRule="evenodd" d="M41.1568 30.8327C41.2818 30.7072 41.352 30.537 41.352 30.3594C41.352 30.1819 41.2818 30.0117 41.1568 29.8862L35.4999 24.2068C35.3749 24.0812 35.2053 24.0107 35.0285 24.0107C34.8517 24.0107 34.6821 24.0812 34.5571 24.2067C34.4321 24.3322 34.3619 24.5025 34.3619 24.68C34.3619 24.8575 34.4321 25.0278 34.5571 25.1533L39.076 29.6902L19.9441 29.6887C19.7671 29.6887 19.5973 29.7593 19.4721 29.885C19.3469 30.0107 19.2766 30.1811 19.2766 30.3589C19.2766 30.5366 19.347 30.7071 19.4721 30.8327C19.5973 30.9584 19.7671 31.029 19.9441 31.029L39.0761 31.0286L34.5574 35.5652C34.4324 35.6908 34.3622 35.861 34.3622 36.0385C34.3622 36.216 34.4324 36.3863 34.5574 36.5118C34.6825 36.6373 34.852 36.7078 35.0288 36.7078C35.2056 36.7078 35.3752 36.6373 35.5002 36.5118L41.1568 30.8327Z" fill="#F9F9F9" stroke="#F9F9F9" />
@@ -685,7 +704,7 @@ const Home = () => {
 
             {/* FOoter */}
 
-            <div className="main relative border-2 border-green-400">
+            <div className="main relative">
                 <div className="mb-40">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1550" height="800" viewBox="0 0 1440 740" fill="none" className='absolute right-0' style={{ top: "-220px" }}>
                         <path opacity="0.3" d="M-23.813 740L1725 740L1725 -2.6269e-05L292.634 256.791C267.124 261.364 244.547 276.057 230.036 297.529L-43.6977 702.561C-54.4697 718.5 -43.0504 740 -23.813 740Z" fill="#C7C7C7" />
@@ -710,7 +729,7 @@ const Home = () => {
                     </svg>
                 </div>
 
-                <div className="flex w-10/12 border-2 border-green-800 -bottom-96 m-auto absolute left-40">
+                <div className="flex w-10/12 -bottom-96 m-auto absolute left-40">
                     <div className=" w-3/12">
                         <div className="mb-7">
                             <svg xmlns="http://www.w3.org/2000/svg" width="86" height="26" viewBox="0 0 86 26" fill="none">
